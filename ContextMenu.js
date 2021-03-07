@@ -5,9 +5,8 @@ const box = document.querySelector(".relBox");
 el.addEventListener("contextmenu", (e) => {
   e.preventDefault();
   const rect = el.getBoundingClientRect();
-  const rectBox = box.getBoundingClientRect();
   const x = e.clientX - rect.left;
-  const y = e.clientY - rectBox.top;
+  const y = el.offsetTop;
   contextMenu.style.left = `${x}px`;
   contextMenu.style.top = `${y}px`;
 
